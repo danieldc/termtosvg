@@ -1,5 +1,6 @@
 .PHONY: usage tests venv_dev build deploy_test deploy_prod static man
 
+
 VENV_PATH=.venv
 VENV_ACTIVATE=. $(VENV_PATH)/bin/activate
 EXAMPLES_DIR=examples
