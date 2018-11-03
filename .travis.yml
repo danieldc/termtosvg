@@ -18,7 +18,7 @@ before_install:
 
 install:
     - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then sudo pip3 install -U -e .[dev]; else pip install -U -e .[dev]; fi
-    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pip3 freeze; else pip freeze; fi
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then python3 --version && pip3 freeze; else python --version && pip freeze; fi
 
 script:
     - coverage run --branch --source termtosvg -m unittest -v
